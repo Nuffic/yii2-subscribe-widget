@@ -1,0 +1,12 @@
+{
+  "name": "nuffic/yii2-subscribe",
+  "type": "yii2-extension",
+  "requires" :{
+    "guzzlehttp/guzzle": "^6.2",
+  },
+  "autoload": {
+    "psr-4": {
+      "nuffic\\yii2-subscribe\\": "src/"
+    }
+  }
+}
