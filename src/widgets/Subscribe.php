@@ -1,6 +1,6 @@
 <?php
 
-namespace app\widgets;
+namespace nuffic\subscribe\widgets;
 
 use yii\base\Widget;
 

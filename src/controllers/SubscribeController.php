@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace nuffic\subscribe\controllers;
 
 use GuzzleHttp\Client;
 use Yii;
@@ -28,7 +28,7 @@ class SubscribeController extends Controller
         $client = new Client();
 
         $client->post('http://swakke.com/xml.php', [
-            'body' => ,
+            'body' => 'asd',
         ]);
 
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace nuffic\subscribe\models;
 
 use yii\base\Model;
 
