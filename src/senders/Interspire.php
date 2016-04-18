@@ -15,6 +15,8 @@ class Interspire extends Object implements SubscribableInterface
     public $apiToken;
 
     public $apiUser;
+    
+    public $host;
 
     public $endPoint;
 
@@ -41,13 +43,12 @@ class Interspire extends Object implements SubscribableInterface
         $resp->data = Yii::createObject(['class' => 'yii\rest\Serializer', 'response' => $resp])->serialize($payload);
         $formatter->format($resp);
 
-        $client = new Client([
-            'headers' => [
-                'Accept-Language' => 'es_ES',
-            ]
-        ]);
+        $client = new Client();
 
         $response = $client->post($this->endPoint, [
+            'headers' => [
+                'Host' => $this->host,
+            ],
             'body' => $resp->content,
         ]);
 
