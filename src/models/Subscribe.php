@@ -2,6 +2,7 @@
 
 namespace nuffic\subscribe\models;
 
+use Yii;
 use yii\base\Model;
 
 class Subscribe extends Model
@@ -17,7 +18,13 @@ class Subscribe extends Model
         ];
     }
 
-    private function sendToInterspire($model) {
+    public function subscribe()
+    {
+        if (!$this->validate()) {
+            return false;
+        }
 
+        $model =  Yii::$app->subscriber->subscribe($this);
+        return !$model->getErrors();
     }
 }
