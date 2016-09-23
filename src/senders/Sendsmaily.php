@@ -12,10 +12,11 @@ class Sendsmaily extends ApiClient
     public $baseUrl;
     public $apiUser;
     public $apiPassword;
+    public $params;
 
     public function subscribe(Model $model)
     {
-        $result = $this->addSubscriber($model->email);
+        $result = $this->addSubscriber($model->email, $this->params);
 
         if (strtoupper($result->message) == 'OK') {
             return $model;
