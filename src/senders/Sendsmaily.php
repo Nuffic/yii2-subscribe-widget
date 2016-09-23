@@ -15,7 +15,6 @@ class Sendsmaily extends ApiClient
 
     public function subscribe(Model $model)
     {
-
         $result = $this->addSubscriber($model->email);
 
         if (strtoupper($result->message) == 'OK') {
