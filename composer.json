@@ -3,7 +3,8 @@
   "type": "yii2-extension",
   "requires" :{
     "yiisoft/yii2": "*",
-    "guzzlehttp/guzzle": "^6.2"
+    "guzzlehttp/guzzle": "^6.2",
+    "nuffic/sendsmaily": "dev-develop"
   },
   "autoload": {
     "psr-4": {
